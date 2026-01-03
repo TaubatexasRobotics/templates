@@ -11,6 +11,7 @@
  includefoot
  }
 \usepackage{graphicx}
+\usepackage{parskip}
 \usepackage{amsfonts, amssymb, amsmath}
 \usepackage[headings]{fancyhdr}
 \usepackage{helvet}
@@ -18,13 +19,32 @@
 \pagestyle{fancy}
 \fancyhead[R]{\includegraphics[width=3cm]{images/atec.png}}
 \fancyhead[L]{\includegraphics[width=2cm]{images/taubatexas.png}}
-\fancyfoot[L]{\scriptsize ATEC\\Associação Taubatexas para o Esporte e Conhecimento\\Telefone: (12) 99261-9898 / CNPJ: 37.124.329.0001-74}
+\fancyfoot[L]{\scriptsize ATEC\\Associação Taubatexas para o Esporte e Conhecimento\\Telefone: (12) 99261-9898 - CNPJ: 37.124.329.0001-74}
 \fancyfoot[R]{\scriptsize E.E. Engenheiro Urbano Alves de Souza Pereira\\R. Antônio Rodrigues Miranda, 170\\CEP: 12031-580 - Taubaté - SP}
+\fancyhead[C]{\Large \textbf{\uppercase{Template Document}}}
 \setlength{\footskip}{80pt}
 \setlength{\arrayrulewidth}{0.5mm}
 \setlength{\tabcolsep}{18pt}
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  numbers=left,
+  tabsize=2,
+  belowcaptionskip=1\baselineskip,
+  language=Java,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{style=mystyle}
+\usepackage[breaklinks]{hyperref}
+\usepackage{xcolor}
 \renewcommand{\arraystretch}{1.5}
-
 \begin{document}
 \section{Introduction}
 The distributive property states that $a(b + c) = ab + ac$, for all $a, b, c \in \mathbb{R}$.\par
@@ -36,7 +56,7 @@ Meaning the next equation has no integer solutions:
 \hline
 \multicolumn{3}{|c|}{Team List} \\
 \hline
-Name & City & State/Province \\
+Number & City & State/Province \\
 \hline
 254 & San Jose & CA \\
 1678 & Davis & CA \\
@@ -47,4 +67,8 @@ Name & City & State/Province \\
 27 & Clarkston & MI \\
 \hline
 \end{tabular}
+\vspace{10pt}
+\newline
+Here is a code on how to create a Drivetrain subsystem.
+\lstinputlisting[caption=Cool algorithm]{Drivetrain.java}
 \end{document}
